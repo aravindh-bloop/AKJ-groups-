@@ -1,0 +1,17 @@
+{
+    "name": "akj-groups",
+    "version": "1.0.0",
+    "description": "AKJ Groups - Premium Construction & Architecture Website",
+    "main": "landingpage.html",
+    "scripts": {
+        "dev": "npx -y http-server -p 8080 -o landingpage.html",
+        "start": "npx -y http-server -p 8080"
+    },
+    "keywords": [
+        "construction",
+        "architecture",
+        "akj-groups"
+    ],
+    "author": "AKJ Groups",
+    "license": "MIT"
+}
