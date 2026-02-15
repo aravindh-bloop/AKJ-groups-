@@ -59,6 +59,34 @@ body {
 }
 
 /* ===========================
+   GRADIENT TEXT FOR COMPANY NAME
+   =========================== */
+.gradient-text {
+    background: linear-gradient(180deg, #92690e 0%, #ecde7a 50%, #92690e 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-fill-color: transparent !important;
+    display: inline-block;
+}
+
+
+/* Logo in Services Section */
+.section-logo {
+    width: 120px;
+    height: auto;
+    margin: 0 auto 1.5rem;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: var(--transition-smooth);
+}
+
+.section-logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* ===========================
    NAVIGATION
    =========================== */
 .navbar {
@@ -89,14 +117,12 @@ body {
     font-family: var(--font-display);
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--white);
     letter-spacing: 1px;
     transition: var(--transition-fast);
 }
 
-.navbar.scrolled .logo h1 {
-    color: var(--dark-blue);
-}
+/* Gradient text maintains its gradient in both states */
+
 
 .nav-links {
     display: flex;
@@ -625,6 +651,349 @@ section {
 
 .gallery-item:hover .gallery-category {
     transform: translateY(0);
+}
+
+/* ===========================
+   PARTNERS SECTION - ROYAL ANIMATED CAROUSEL
+   =========================== */
+.partners {
+    background: linear-gradient(135deg, #1A2B3C 0%, #2C3E50 50%, #1A2B3C 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Animated background pattern */
+.partners::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(146, 170, 131, 0.1) 0%, transparent 50%);
+    animation: backgroundShift 20s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes backgroundShift {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
+}
+
+.partners-carousel-wrapper {
+    overflow: hidden;
+    position: relative;
+    margin-top: 3rem;
+    padding: 3rem 0;
+}
+
+/* Royal gradient fade effects with gold tint */
+.partners-carousel-wrapper::before,
+.partners-carousel-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.partners-carousel-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #1A2B3C 0%, rgba(26, 43, 60, 0.8) 50%, transparent 100%);
+}
+
+.partners-carousel-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #1A2B3C 0%, rgba(26, 43, 60, 0.8) 50%, transparent 100%);
+}
+
+.partners-carousel {
+    display: flex;
+    gap: 4rem;
+    animation: slideCarousel 45s linear infinite;
+    will-change: transform;
+}
+
+/* Pause animation on hover */
+.partners-carousel-wrapper:hover .partners-carousel {
+    animation-play-state: paused;
+}
+
+@keyframes slideCarousel {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-100% / 2));
+    }
+}
+
+/* Category Block - Royal container with gold accents */
+.category-block {
+    background: linear-gradient(145deg, #FFFFFF 0%, #F8F9FA 100%);
+    border-radius: 28px;
+    padding: 3rem 2.5rem;
+    min-width: 700px;
+    flex-shrink: 0;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(212, 165, 116, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shimmer effect on category block */
+.category-block::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 30%,
+            rgba(212, 165, 116, 0.1) 50%,
+            transparent 70%);
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+.category-block:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2),
+        0 0 0 2px rgba(212, 165, 116, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    border-color: rgba(212, 165, 116, 0.3);
+}
+
+/* Category Header - Royal styling */
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to right, transparent, #D4A574, transparent) 1;
+    position: relative;
+}
+
+.category-header::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #D4A574, transparent);
+    border-radius: 2px;
+}
+
+.category-icon-small {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 2px 4px rgba(212, 165, 116, 0.3));
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.category-title-small {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #1A2B3C 0%, #D4A574 50%, #1A2B3C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    font-family: var(--font-display);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Partner Items Grid - Larger cards */
+.category-partners {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Individual Partner Item - BIGGER & ROYAL */
+.partner-item {
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(212, 165, 116, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow effect on partner item */
+.partner-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212, 165, 116, 0.2) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+}
+
+.partner-item:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.partner-item:hover {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFBF5 100%);
+    border-color: #D4A574;
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:
+        0 15px 40px rgba(212, 165, 116, 0.25),
+        0 0 20px rgba(212, 165, 116, 0.15);
+}
+
+/* Circular Logo - Larger & Royal */
+.partner-logo-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #D4A574 0%, #92AA83 50%, #5A6C57 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 2px;
+    box-shadow:
+        0 8px 25px rgba(212, 165, 116, 0.3),
+        inset 0 -2px 10px rgba(0, 0, 0, 0.2),
+        inset 0 2px 10px rgba(255, 255, 255, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Rotating ring effect */
+.partner-logo-circle::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #D4A574;
+    border-right-color: #D4A574;
+    animation: rotateRing 3s linear infinite;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+@keyframes rotateRing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.partner-item:hover .partner-logo-circle::before {
+    opacity: 1;
+}
+
+.partner-item:hover .partner-logo-circle {
+    transform: scale(1.15) rotate(15deg);
+    background: linear-gradient(135deg, #E5B87D 0%, #A3BC94 50%, #6B7D68 100%);
+    box-shadow:
+        0 12px 35px rgba(212, 165, 116, 0.45),
+        0 0 30px rgba(212, 165, 116, 0.3),
+        inset 0 -2px 10px rgba(0, 0, 0, 0.2),
+        inset 0 2px 10px rgba(255, 255, 255, 0.4);
+}
+
+/* Partner Brand Name - Larger */
+.partner-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    margin: 0;
+    transition: all 0.3s ease;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+}
+
+.partner-item:hover .partner-brand {
+    color: #D4A574;
+    transform: scale(1.05);
+}
+
+/* Partner Description - Enhanced */
+.partner-desc {
+    font-size: 0.95rem;
+    color: var(--medium-grey);
+    margin: 0;
+    line-height: 1.5;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.partner-item:hover .partner-desc {
+    color: var(--ash-grey);
 }
 
 /* ===========================
