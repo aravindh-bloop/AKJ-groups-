@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -12,6 +16,27 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // After navigating to homepage, scroll to the target section
+    useEffect(() => {
+        if (location.pathname === '/' && location.hash) {
+            const id = location.hash.replace('#', '');
+            const el = document.getElementById(id);
+            if (el) {
+                setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100);
+            }
+        }
+    }, [location]);
+
+    const scrollToSection = (sectionId) => {
+        setIsMobileMenuOpen(false);
+        if (location.pathname === '/') {
+            const el = document.getElementById(sectionId);
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            navigate(`/#${sectionId}`);
+        }
+    };
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -25,13 +50,12 @@ const Navbar = () => {
                         <h1 className="gradient-text">AKJ Groups</h1>
                     </div>
                     <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`} id="navLinks">
-                        <a href="#home" className="nav-link active">Home</a>
-                        <a href="#projects" className="nav-link">Projects</a>
-
-                        <a href="#services" className="nav-link">Services</a>
-                        <a href="#gallery" className="nav-link">Gallery</a>
-                        <a href="#testimonials" className="nav-link">Testimonials</a>
-                        <a href="#contact" className="nav-link">Contact</a>
+                        <Link to="/" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+                        <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+                        <button className="nav-link nav-link-btn" onClick={() => scrollToSection('projects')}>Projects</button>
+                        <a href="/#services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+                        <Link to="/testimonials" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</Link>
+                        <button className="nav-link nav-link-btn" onClick={() => scrollToSection('contact')}>Contact</button>
                     </div>
                     <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="whatsapp-button">
                         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
