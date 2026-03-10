@@ -52,6 +52,7 @@ const Navbar = () => {
                     <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`} id="navLinks">
                         <Link to="/" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
                         <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
+                        <Link to="/joint-venture" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Joint Venture</Link>
                         <button className="nav-link nav-link-btn" onClick={() => scrollToSection('projects')}>Projects</button>
                         <a href="/#services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
                         <Link to="/testimonials" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</Link>

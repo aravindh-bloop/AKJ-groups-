@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import About from './components/About';
 import TestimonialsPage from './components/TestimonialsPage';
+import JointVenture from './components/JointVenture';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Chatbot from './components/Chatbot';
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/testimonials" element={<TestimonialsPage />} />
+                    <Route path="/joint-venture" element={<JointVenture />} />
                 </Routes>
                 <Footer />
                 <Chatbot />

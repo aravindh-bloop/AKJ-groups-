@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAR0KYUWkERE_AvPFLm3BED_wkD6AQMXSQ",
-    authDomain: "akj-groups-website.firebaseapp.com",
-    projectId: "akj-groups-website",
-    storageBucket: "akj-groups-website.firebasestorage.app",
-    messagingSenderId: "123667776467",
-    appId: "1:123667776467:web:56be2fbdc6989e4227e526"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);

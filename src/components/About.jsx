@@ -3,35 +3,45 @@ import React from 'react';
 const About = () => {
     const values = [
         {
-            icon: '🎯',
-            title: 'Excellence',
-            description: 'We strive for perfection in every project, ensuring the highest quality standards in construction.'
-        },
-        {
-            icon: '🤝',
+            icon: '/assets/values-icon-4.png',
             title: 'Integrity',
-            description: 'Honesty and transparency form the foundation of our relationships with clients and partners.'
+            description: 'We uphold transparency and honesty in all our dealings.'
         },
         {
-            icon: '💡',
+            icon: '/assets/values-icon-1.png',
+            title: 'Timely Delivery',
+            description: 'Every project is delivered as promised, without compromise.'
+        },
+        {
+            icon: '/assets/values-icon-2.png',
+            title: 'Customer Satisfaction',
+            description: 'Our customers are at the heart of every decision we make.'
+        },
+        {
+            icon: '/assets/values-icon-3.png',
             title: 'Innovation',
-            description: 'We embrace cutting-edge technologies and modern construction methodologies.'
+            description: 'We constantly adapt and improve to build smarter homes.'
         },
         {
-            icon: '🌱',
+            icon: '/assets/values-icon-quality.png',
+            title: 'Quality Craftsmanship',
+            description: 'We ensure high construction standards in every detail.'
+        },
+        {
+            icon: '/assets/values-icon-collab.png',
+            title: 'Collaboration',
+            description: 'We value teamwork with our customers, landowners, and employees.'
+        },
+        {
+            icon: '/assets/values-icon-sustain.png',
             title: 'Sustainability',
-            description: 'Building responsibly for today while preserving resources for tomorrow.'
+            description: 'We build responsibly with an eye on future generations.'
         },
         {
-            icon: '⚡',
-            title: 'Efficiency',
-            description: 'Delivering projects on time and within budget without compromising quality.'
+            icon: '/assets/values-icon-account.png',
+            title: 'Accountability',
+            description: 'We take ownership of our promises and performance.'
         },
-        {
-            icon: '❤️',
-            title: 'Customer Focus',
-            description: 'Your satisfaction is our success. We listen, understand, and deliver beyond expectations.'
-        }
     ];
 
     const team = [
@@ -115,7 +125,7 @@ const About = () => {
             <section className="about-hero">
                 <div className="about-hero-overlay"></div>
                 <img
-                    src="assets/happy home.jpg"
+                    src="/assets/happy home.jpg"
                     alt="Happy Home"
                     className="about-hero-image"
                 />
@@ -140,7 +150,7 @@ const About = () => {
                     <div className="commitment-grid">
                         <div className="commitment-image-wrapper">
                             <img
-                                src="assets/home arch.jpg"
+                                src="/assets/home arch.jpg"
                                 alt="Architectural Excellence"
                                 className="commitment-image"
                             />
@@ -224,21 +234,21 @@ const About = () => {
             </section>
 
             {/* Our Values */}
-            <section className="about-values">
-                <div className="container">
-                    <div className="section-header">
-                        <span className="section-tag">Our Values</span>
-                        <h2 className="section-title">The Pillars of Our Success</h2>
-                        <p className="section-description">
-                            Our core values guide every decision we make and every project we undertake
-                        </p>
-                    </div>
-                    <div className="values-grid">
+            <section className="our-values-section">
+                <div className="ov-container">
+                    <h2 className="ov-heading">Our Values</h2>
+                    <div className="ov-grid">
                         {values.map((value, index) => (
-                            <div key={index} className="value-card">
-                                <div className="value-icon">{value.icon}</div>
-                                <h3 className="value-title">{value.title}</h3>
-                                <p className="value-description">{value.description}</p>
+                            <div key={index} className="ov-card">
+                                <div className="ov-icon-wrap">
+                                    <img
+                                        src={value.icon}
+                                        alt={value.title}
+                                        className="ov-icon-img"
+                                    />
+                                </div>
+                                <h3 className="ov-title">{value.title}</h3>
+                                <p className="ov-desc">{value.description}</p>
                             </div>
                         ))}
                     </div>
