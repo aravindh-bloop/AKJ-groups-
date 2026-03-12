@@ -58,13 +58,13 @@ const About = () => {
             description: 'Strategic leader guiding the company\'s vision and ensuring sustainable growth.'
         },
         {
-            name: 'A. Jenson Bright',
+            name: 'A. Johnson Bright',
             role: 'Managing Director',
             initial: 'AJB',
             description: 'Driving operational excellence and strategic initiatives across all projects.'
         },
         {
-            name: 'A. Jenson Bright',
+            name: 'A. Johnson Bright',
             role: 'Director',
             initial: 'AJB',
             description: 'Overseeing project execution and maintaining the highest quality standards.'

@@ -1,4 +1,4 @@
-﻿/* ===========================
+/* ===========================
    CSS RESET & BASE STYLES
    =========================== */
 * {
@@ -3068,9 +3068,36 @@ textarea {
 
 /* Ã¢â€â‚¬Ã¢â€â‚¬ Section wrapper Ã¢â€â‚¬Ã¢â€â‚¬ */
 .pc-section {
-    background: #ffffff;
+    background: linear-gradient(135deg, var(--muted-teal) 0%, #6b8f5e 45%, #4a7a5a 100%);
     padding: 6rem 0 5rem;
     position: relative;
+    overflow: hidden;
+}
+
+.pc-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pc-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.pc-section .section-title, 
+.pc-section .section-description {
+    color: #ffffff;
+}
+
+.pc-section .section-tag {
+    color: var(--frosted-mint);
 }
 
 /* Ã¢â€â‚¬Ã¢â€â‚¬ Category tab pills Ã¢â€â‚¬Ã¢â€â‚¬ */
@@ -3337,7 +3364,7 @@ textarea {
    OUR VALUES SECTION
    =========================== */
 .our-values-section {
-    background: linear-gradient(135deg, #1e2a3a 0%, #2a1a2e 40%, #6b1a2a 100%);
+    background: linear-gradient(135deg, var(--muted-teal) 0%, #6b8f5e 45%, #4a7a5a 100%);
     padding: 5rem 0 6rem;
     position: relative;
     overflow: hidden;
@@ -3347,8 +3374,12 @@ textarea {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse at 80% 50%, rgba(120, 20, 40, 0.35) 0%, transparent 60%);
+    background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
     pointer-events: none;
+    z-index: 0;
 }
 
 .ov-container {
@@ -3490,7 +3521,7 @@ textarea {
 
 .qp-eyebrow {
     display: inline-block;
-    font-size: 0.75rem;
+    font-size: 1.05rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: #C9960C;
