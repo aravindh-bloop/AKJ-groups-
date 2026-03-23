@@ -9,6 +9,10 @@ import ServicesPage from './components/ServicesPage';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Chatbot from './components/Chatbot';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
+
+
 
 function App() {
     return (
@@ -22,6 +26,10 @@ function App() {
                     <Route path="/testimonials" element={<TestimonialsPage />} />
                     <Route path="/joint-venture" element={<JointVenture />} />
                     <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path="/terms-of-service" element={<TermsAndConditions />} />
+
+
                 </Routes>
                 <Footer />
                 <Chatbot />

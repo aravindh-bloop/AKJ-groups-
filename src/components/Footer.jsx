@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -91,11 +91,11 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>&copy; {currentYear} <span className="gradient-text">AKJ Groups</span>. All rights reserved.</p>
                     <div className="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
+                        <Link to="/privacy-policy">Privacy Policy</Link>
                         <span>•</span>
-                        <a href="#">Terms of Service</a>
+                        <Link to="/terms-of-service">Terms of Service</Link>
                         <span>•</span>
-                        <a href="#">Sitemap</a>
+                        <Link to="#">Sitemap</Link>
                     </div>
                 </div>
             </div>
