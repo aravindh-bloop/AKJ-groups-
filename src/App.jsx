@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import About from './components/About';
 import TestimonialsPage from './components/TestimonialsPage';
 import JointVenture from './components/JointVenture';
+import ServicesPage from './components/ServicesPage';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Chatbot from './components/Chatbot';
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/testimonials" element={<TestimonialsPage />} />
                     <Route path="/joint-venture" element={<JointVenture />} />
+                    <Route path="/services" element={<ServicesPage />} />
                 </Routes>
                 <Footer />
                 <Chatbot />

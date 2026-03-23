@@ -66,18 +66,25 @@ const Services = () => {
     return (
         <section className="services" id="services">
             <div className="container">
-                <div className="section-header">
-                    <img src="/assets/logo.png" alt="AKJ Groups Logo" className="section-logo" />
-                    <span className="section-tag">What We Do</span>
-                    <h2 className="section-title">Our Services</h2>
-                    <p className="section-description">Comprehensive construction solutions tailored to your vision</p>
+                <div className="section-header fade-in-up">
+                    <span className="section-tag-modern">Our Craft</span>
+                    <h2 className="section-title">Core Specializations</h2>
+                    <p className="section-description">Delivering structural excellence through industrial-grade precision and architectural innovation.</p>
                 </div>
                 <div className="services-grid">
                     {services.map((service, index) => (
-                        <div className="service-card" key={index}>
-                            <div className="service-icon">{service.icon}</div>
+                        <div className="service-card fade-in-up" key={index} style={{ animationDelay: `${index * 0.1}s` }}>
+                            <div className="service-icon-wrapper">
+                                <div className="service-icon">{service.icon}</div>
+                            </div>
                             <h3>{service.title}</h3>
                             <p>{service.description}</p>
+                            <div className="service-link">
+                                <span>Explore Service</span>
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </div>
                         </div>
                     ))}
                 </div>

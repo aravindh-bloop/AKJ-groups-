@@ -108,21 +108,21 @@ const Contact = () => {
                             <div className="info-icon">📍</div>
                             <div className="info-content">
                                 <h4>Address</h4>
-                                <p>123 Construction Avenue<br />Building District, Mumbai 400001</p>
+                                <p>288, 1st Block, Mogappair<br />Chennai - 600020, Tamil Nadu</p>
                             </div>
                         </div>
                         <div className="info-item">
                             <div className="info-icon">📞</div>
                             <div className="info-content">
                                 <h4>Phone</h4>
-                                <p>+91 98765 43210<br />+91 98765 43211</p>
+                                <p>+91 98408 53007<br />+91 89394 62856</p>
                             </div>
                         </div>
                         <div className="info-item">
                             <div className="info-icon">✉️</div>
                             <div className="info-content">
                                 <h4>Email</h4>
-                                <p>info@akjgroups.com<br />projects@akjgroups.com</p>
+                                <p>akjgroupsmd@gmail.com</p>
                             </div>
                         </div>
                         <div className="info-item">

@@ -58,7 +58,7 @@ const About = () => {
             description: 'Strategic leader guiding the company\'s vision and ensuring sustainable growth.'
         },
         {
-            name: 'A. Johnson Bright',
+            name: 'A. Jenson Bright',
             role: 'Managing Director',
             initial: 'AJB',
             description: 'Driving operational excellence and strategic initiatives across all projects.'
@@ -74,12 +74,6 @@ const About = () => {
             role: 'Vice President',
             initial: 'SN',
             description: 'Leading key initiatives and ensuring seamless coordination across departments.'
-        },
-        {
-            name: 'V. Kumaresan',
-            role: 'Project Engineer',
-            initial: 'VK',
-            description: 'Expert in project engineering, ensuring technical excellence in every build.'
         },
         {
             name: 'Saravanan',
@@ -111,27 +105,23 @@ const About = () => {
             initial: 'M',
             description: 'Precision surveying and site analysis for accurate project planning.'
         },
-        {
-            name: 'Joderick Sherwin',
-            role: 'Website Manager',
-            initial: 'JS',
-            description: 'Managing digital presence and online communications for AKJ Groups.'
-        }
+
     ];
 
     return (
         <div className="about-page">
             {/* Landing Content */}
             <section className="about-hero">
-                <div className="about-hero-overlay"></div>
-                <img
-                    src="/assets/happy home.jpg"
-                    alt="Happy Home"
-                    className="about-hero-image"
-                />
+                <div className="about-hero-image-wrapper">
+                    <img
+                        src="/assets/happy home.jpg"
+                        alt="Happy Home"
+                        className="about-hero-image"
+                    />
+                </div>
                 <div className="about-hero-content">
                     <div className="container">
-                        <span className="section-tag fade-in-up">About Us</span>
+                        <div className="section-tag fade-in-up">About Us</div>
                         <h1 className="about-hero-title fade-in-up delay-1">
                             Building Trust, Creating Homes
                         </h1>
@@ -233,22 +223,29 @@ const About = () => {
                 </div>
             </section>
 
-            {/* Our Values */}
-            <section className="our-values-section">
-                <div className="ov-container">
-                    <h2 className="ov-heading">Our Values</h2>
-                    <div className="ov-grid">
-                        {values.map((value, index) => (
-                            <div key={index} className="ov-card">
-                                <div className="ov-icon-wrap">
+            {/* Our Values - Flash Card Marquee */}
+            <section className="about-values-marquee">
+                <div className="container">
+                    <div className="section-header text-center">
+                        <span className="section-tag">Our Core</span>
+                        <h2 className="section-title">Values That Drive Us</h2>
+                        <p className="section-description">
+                            The fundamental beliefs that guide our actions and shape our culture.
+                        </p>
+                    </div>
+                </div>
+                <div className="values-marquee-viewport">
+                    <div className="values-marquee-track">
+                        {[...values, ...values, ...values].map((value, index) => (
+                            <div key={index} className="flash-value-card">
+                                <div className="flash-value-icon">
                                     <img
                                         src={value.icon}
                                         alt={value.title}
-                                        className="ov-icon-img"
                                     />
                                 </div>
-                                <h3 className="ov-title">{value.title}</h3>
-                                <p className="ov-desc">{value.description}</p>
+                                <h3 className="flash-value-title">{value.title}</h3>
+                                <p className="flash-value-desc">{value.description}</p>
                             </div>
                         ))}
                     </div>

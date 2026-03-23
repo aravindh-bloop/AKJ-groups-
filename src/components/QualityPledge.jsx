@@ -5,7 +5,7 @@ const QualityPledge = () => {
         {
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="32" height="32">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
             ),
             label: 'Top-Grade Materials Only',
@@ -14,8 +14,8 @@ const QualityPledge = () => {
         {
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="32" height="32">
-                    <path d="M9 12l2 2 4-4"/>
-                    <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/>
+                    <path d="M9 12l2 2 4-4" />
+                    <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" />
                 </svg>
             ),
             label: 'Zero Compromise Policy',
@@ -24,10 +24,10 @@ const QualityPledge = () => {
         {
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="32" height="32">
-                    <rect x="2" y="3" width="20" height="14" rx="2"/>
-                    <path d="M8 21h8M12 17v4"/>
-                    <path d="M7 8h.01M11 8h6"/>
-                    <path d="M7 12h.01M11 12h6"/>
+                    <rect x="2" y="3" width="20" height="14" rx="2" />
+                    <path d="M8 21h8M12 17v4" />
+                    <path d="M7 8h.01M11 8h6" />
+                    <path d="M7 12h.01M11 12h6" />
                 </svg>
             ),
             label: 'Trusted Brand Partners',
@@ -36,7 +36,7 @@ const QualityPledge = () => {
         {
             icon: (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" width="32" height="32">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
             ),
             label: 'Lifetime Quality Assurance',
@@ -65,8 +65,8 @@ const QualityPledge = () => {
                         <span className="qp-headline-accent">Not Now. Not Ever.</span>
                     </h2>
                     <p className="qp-subtext">
-                        At AKJ Groups, we hold one standard — the highest. Even when budgets are tight, even when 
-                        no one is watching, we use only top-tier brands and materials. Because our name is on 
+                        At AKJ Groups, we hold one standard — the highest. Even when budgets are tight, even when
+                        no one is watching, we use only top-tier brands and materials. Because our name is on
                         every wall, every floor, every beam we build.
                     </p>
                 </div>

@@ -81,9 +81,9 @@ const Footer = () => {
 
                     <div className="footer-section footer-contact">
                         <h4>Contact Info</h4>
-                        <p>📍 123 Construction Avenue<br />Chennai 600020, India</p>
-                        <p>📞 +91 xxxxx xxxxx</p>
-                        <p>✉️ aravindhshankar.r@gmail.com</p>
+                        <p>📍 288, 1st Block, Mogappair<br />Chennai 600020, India</p>
+                        <p>📞 +91 98408 53007<br />+91 89394 62856</p>
+                        <p>✉️ akjgroupsmd@gmail.com</p>
                         <p>🕒 Mon - Sat: 9:00 AM - 7:00 PM</p>
                     </div>
                 </div>

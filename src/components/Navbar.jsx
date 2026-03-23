@@ -54,7 +54,7 @@ const Navbar = () => {
                         <Link to="/about" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
                         <Link to="/joint-venture" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Joint Venture</Link>
                         <button className="nav-link nav-link-btn" onClick={() => scrollToSection('projects')}>Projects</button>
-                        <a href="/#services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+                        <Link to="/services" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
                         <Link to="/testimonials" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>Testimonials</Link>
                         <button className="nav-link nav-link-btn" onClick={() => scrollToSection('contact')}>Contact</button>
                     </div>
