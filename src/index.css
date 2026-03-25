@@ -3365,6 +3365,49 @@ textarea {
     to { opacity: 1; }
 }
 
+/* Super Highlight */
+.modern-partner-card.super-highlight .mp-card-inner {
+    border: 2px solid #D4A574;
+    background: linear-gradient(145deg, #ffffff, #faf7f2);
+    box-shadow: 0 15px 35px rgba(212, 165, 116, 0.2);
+    transform: translateY(-5px);
+}
+
+.modern-partner-card.super-highlight:hover .mp-card-inner {
+    box-shadow: 0 25px 50px rgba(212, 165, 116, 0.4);
+    transform: translateY(-12px);
+    border-color: #c98e4f;
+}
+
+.modern-partner-card.super-highlight .mp-name {
+    color: #b5803a;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.super-badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: linear-gradient(135deg, #D4A574, #b5803a);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(212, 165, 116, 0.5);
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: badgePulse 2s infinite;
+}
+
+@keyframes badgePulse {
+    0% { box-shadow: 0 0 5px rgba(212, 165, 116, 0.4); }
+    50% { box-shadow: 0 0 20px rgba(212, 165, 116, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(212, 165, 116, 0.4); }
+}
+
 /* Initials fallback */
 @media (max-width: 768px) {
     .modern-partners-grid {

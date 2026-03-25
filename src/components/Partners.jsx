@@ -34,7 +34,10 @@ const Partners = () => {
             partners: [
                 { name: 'UltraTech', description: 'The Engineer\'s Choice', logo: '/assets/partners/ultratech.png', initials: 'UC' },
                 { name: 'Ramco', description: 'High-Performance Cement', logo: '/assets/partners/ramco.png', initials: 'R' },
-                { name: 'Tata Steel', description: 'Strength of Tomorrow', logo: '/assets/partners/tatasteel.png', initials: 'TS' },
+                { name: 'Tata Steel', description: 'Strength of Tomorrow', logo: '/assets/partners/tatasteel_new.jpeg', initials: 'TS', highlight: true },
+                { name: 'ARS Steel', description: 'Quality TMT Bars', logo: '/assets/partners/ars.jpeg', initials: 'ARS', highlight: true },
+                { name: 'Jindaal Steel', description: 'Unmatched Durability', logo: '/assets/partners/jindaal.jpeg', initials: 'JS', highlight: true },
+                { name: 'Vizag Steel', description: 'The Pride of Steel', logo: '/assets/partners/vizagsteel.jpeg', initials: 'VS', highlight: true },
             ],
         },
         {
@@ -52,8 +55,9 @@ const Partners = () => {
     const PartnerCard = ({ partner }) => {
         const [imgError, setImgError] = useState(false);
         return (
-            <div className="modern-partner-card">
-                <div className="mp-card-inner">
+            <div className={`modern-partner-card ${partner.highlight ? 'super-highlight' : ''}`}>
+                <div className="mp-card-inner" style={{ position: 'relative' }}>
+                    {partner.highlight && <div className="super-badge">Premium</div>}
                     <div className="mp-logo-container">
                         {!partner.logo || imgError ? (
                             <div className="mp-fallback">{partner.initials}</div>
