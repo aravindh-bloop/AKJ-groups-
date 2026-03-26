@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.\\(png|jpeg|jpg|svg\\)$\")",
+      "Bash(find 'd:/AKJ groups' -not -path */node_modules/* -name *.jpeg -o -name *.jpg -o -name *.png)"
+    ]
+  }
+}
